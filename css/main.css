@@ -27,9 +27,12 @@ body::-webkit-scrollbar {
 }
 
 .presentation__content {
-  width: 80%;
-  padding: 60px 40px;
+  width: 90%;
+  padding: 10px 20px;
   margin: auto;
+}
+.presentation__content p{
+  margin: 5px;
 }
 
 .presentation__content__top {
@@ -37,7 +40,7 @@ body::-webkit-scrollbar {
 }
 
 .presentation__content__top h1::before {
-  animation: texto 6s;
+  animation: texto 3s;
   content: "Ftaget e10ErSd Dezxgaz";
   animation-fill-mode: forwards;
 }
@@ -93,7 +96,7 @@ body::-webkit-scrollbar {
 .presentation__content__center p {
   font-size: 20px;
   color: white;
-  margin-block-end: 40px;
+  margin-block-end: 20px;
 }
 .presentation__content__center .Subtitle {
   font-weight: 800;
@@ -119,8 +122,9 @@ body::-webkit-scrollbar {
 }
 
 .flecha_div {
-  padding: 20px;
+  padding: 0px;
   text-align: center;
+  margin: 0px;
 }
 .flecha_div div {
   width: 200px;
@@ -154,13 +158,6 @@ body::-webkit-scrollbar {
   margin-top: 20%;
   text-align: center;
 }
-.studies h1 {
-  width: 600px;
-  background-color: #d941b0;
-  color: white;
-  border-radius: 20px;
-  margin: 40px auto;
-}
 
 .studies__containers {
   display: grid;
@@ -169,14 +166,16 @@ body::-webkit-scrollbar {
 
 .studies__containers div div img {
   height: 200px;
-  width: 200px;
+  max-width: 300px;
+  width: 100%;
 }
 .studies__containers div div p {
   margin-top: 20px;
 }
 .studies__containers div div {
   border: 4px solid black;
-  width: 300px;
+  max-width: 300px;
+  width: 80%;
   margin: 50px auto;
   padding: 20px;
   border-radius: 20px;
@@ -186,9 +185,9 @@ body::-webkit-scrollbar {
 .technologies {
   text-align: center;
 }
-.technologies h1 {
-  width: 600px;
-  background-color: #d941b0;
+.title--sections {
+  width: 90%;
+  background-color: #1B15BF;
   color: white;
   border-radius: 20px;
   margin: 40px auto;
@@ -201,8 +200,8 @@ body::-webkit-scrollbar {
 
 .technologies_container div {
   margin: 10px auto;
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 2px solid #333a;
   box-shadow: 2px 2px #5558;
@@ -210,6 +209,7 @@ body::-webkit-scrollbar {
 }
 
 .technologies_container div img {
+  margin-top: 10px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -217,15 +217,90 @@ body::-webkit-scrollbar {
 
 .technologies_container div p {
   margin: 0px;
+  margin-top: 4px;
+  font-weight:800;
 }
 
 .projects {
   text-align: center;
 }
-.projects h1 {
-  width: 600px;
-  background-color: #d941b0;
-  color: white;
-  border-radius: 20px;
-  margin: 40px auto;
+
+.projects__container{
+  display: grid;
+  grid-template-columns: repeat(1s, 5fr);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.projects__container__card {
+margin: 20px auto;
+width: 200px;
+height: 300px;
+border: 2px solid black;
+background-color: #fffa;
+transition:1s all;
+}
+
+.projects__container__card .card--image {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  z-index: -100;
+}
+
+.projects__container__card .card--image img{
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects__container__card .card--content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: start;
+  cursor: pointer;
+
+}
+
+.projects__container__card .card--content div{
+  transition:1s all;
+  padding: 17px 3px;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+.projects__container__card .card--content h3{
+  display: block;
+  margin: 0px;
+  text-align: center;
+}
+.projects__container__card .card--content p{
+  display: block;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.projects__container__card:hover .card--content .card--content__div{
+  height: 70%;
+  max-height: 135px;
+}
+.projects__container__card:hover{
+  background: linear-gradient(to bottom, #0001, #000a);;
+}
+.projects__container__card .card--content .card--content__div div{
+  margin: auto;
+}
+
+.projects__container__card .card--content .card--content__div div img{
+  width: 30px;
+  height:30px;
+  margin: auto;
 }
