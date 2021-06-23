@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
   padding: 10px 20px;
   margin: auto;
 }
-.presentation__content p{
+.presentation__content p {
   margin: 5px;
 }
 
@@ -187,10 +187,14 @@ body::-webkit-scrollbar {
 }
 .title--sections {
   width: 90%;
-  background-color: #1B15BF;
+  background-color: #1b15bf;
   color: white;
   border-radius: 20px;
-  margin: 40px auto;
+  margin: 40px auto 40px auto;
+}
+
+.first {
+  margin: 40vh auto 40px auto;
 }
 
 .technologies_container {
@@ -218,28 +222,30 @@ body::-webkit-scrollbar {
 .technologies_container div p {
   margin: 0px;
   margin-top: 4px;
-  font-weight:800;
+  font-weight: 800;
 }
 
 .projects {
   text-align: center;
 }
 
-.projects__container{
+.projects__container {
   display: grid;
   grid-template-columns: repeat(1s, 5fr);
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
 .projects__container__card {
-margin: 20px auto;
-width: 200px;
-height: 300px;
-border: 2px solid black;
-background-color: #fffa;
-transition:1s all;
+  margin: 20px auto;
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: #5558 5px 5px;
+  background-color: #fff0;
+  transition: 1s all;
 }
 
 .projects__container__card .card--image {
@@ -249,14 +255,15 @@ transition:1s all;
   z-index: -100;
 }
 
-.projects__container__card .card--image img{
+.projects__container__card .card--image img {
+  border-radius: 20px;
   margin: 0px;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.projects__container__card .card--content{
+.projects__container__card .card--content {
   height: 100%;
   width: 100%;
   display: flex;
@@ -265,42 +272,60 @@ transition:1s all;
   flex-direction: column;
   text-align: start;
   cursor: pointer;
-
 }
 
-.projects__container__card .card--content div{
-  transition:1s all;
+.projects__container__card .card--content div {
+  transition: 1s all;
   padding: 17px 3px;
   box-sizing: border-box;
   background-color: #fff;
   overflow: hidden;
   max-height: 100px;
+  border-radius: 20px;
 }
 
-.projects__container__card .card--content h3{
+.projects__container__card .card--content h3 {
   display: block;
   margin: 0px;
   text-align: center;
 }
-.projects__container__card .card--content p{
+.projects__container__card .card--content p {
   display: block;
   margin: 0px;
   margin-top: 10px;
 }
 
-.projects__container__card:hover .card--content .card--content__div{
+.projects__container__card:hover .card--content .card--content__div {
   height: 70%;
   max-height: 135px;
 }
-.projects__container__card:hover{
-  background: linear-gradient(to bottom, #0001, #000a);;
+.projects__container__card:hover {
+  background: linear-gradient(to bottom, #0001, #000a);
 }
-.projects__container__card .card--content .card--content__div div{
+.projects__container__card .card--content .card--content__div div {
   margin: auto;
 }
 
-.projects__container__card .card--content .card--content__div div img{
+.projects__container__card .card--content .card--content__div div img {
   width: 30px;
-  height:30px;
+  height: 30px;
   margin: auto;
+}
+
+@media (min-width: 600px) {
+  .projects__container {
+    grid-template-columns: repeat(2, 5fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .technologies_container {
+    grid-template-columns: repeat(5, 5fr);
+  }
+  .projects__container {
+    grid-template-columns: repeat(4, 5fr);
+  }
+  .studies__containers {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
