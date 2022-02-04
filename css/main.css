@@ -16,6 +16,34 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
+h2::selection{
+  background: var(--white);
+  color: var(--black);
+}
+h3::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+p::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+b::selection{
+  background: var(--white);
+  color: var(--black);
+}
+br::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+img::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
 .top{
   background-image: url("../Resources/Vector 1.png");
   background-repeat: no-repeat;
