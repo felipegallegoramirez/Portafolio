@@ -1,0 +1,190 @@
+:root {
+  --white: #c4c4c4;
+  --black: #202020;
+  --gray: #C9C9C9;
+}
+
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #DFDFDF;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+h2::selection{
+  background: var(--white);
+  color: var(--black);
+}
+h3::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+p::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+b::selection{
+  background: var(--white);
+  color: var(--black);
+}
+br::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+img::selection{
+  background: var(--white);
+  color: var(--black);
+}
+
+.top{
+  background-image: url("../Resources/Vector 1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90vh;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+h2 {
+  color:var(--white);
+}
+h3 {
+  color:var(--white);
+}
+p{
+  color:var(--white);
+  
+}
+
+.top__photo{
+  margin: 30px;
+  width: 60%;
+  max-width: 400px;
+}
+
+.top__description{
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  max-width: 700px;
+}
+.top__div {
+  margin: 30px;
+}
+.top__div img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff5;
+  margin: 0px 10px;
+}
+.IAm{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.IAm > div{
+  grid-column: 1 / 4;
+  background-color: var(--black);
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.IAm > div >p{
+  text-align: left;
+  
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.projects > div{
+  grid-column: 1 / 4;
+  background-color: var(--gray);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px;
+  border-radius: 20px;
+  min-height: 600px;
+}
+
+.projects >div > .projects__img{
+  width: 250px;
+  height: 250px;
+
+}
+.projects >div >p{
+  color: var(--black);
+}
+
+.projects > div >div{
+  background-color: var(--black);
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact{
+  background-color: var(--black);
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+.contact>h2{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  margin-block-start: 30px;
+  background-color: var(--black);
+  padding: 20px;
+
+}
+footer >p{
+  margin: 0px;
+}
+
+@media (min-width: 830px) {
+
+ .top{
+  padding: 10vh 0;
+ }
+  .IAm > div{
+    grid-column: auto;
+  }
+  .IAm > .IAm__first{
+    grid-column: 1 / 4;
+  }
+  .projects > div{
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 1404px) {
+  .IAm > .IAm__first{
+    grid-column: 1 / 1;
+    grid-row: 1 / 4;
+  }
+}
