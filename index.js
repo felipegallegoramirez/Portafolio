@@ -31,6 +31,8 @@ estudios2.addEventListener("click",(()=>{
     Diplomado 800 horas en habilidades de programacion enfasis en programacion web.  <br> <br>
     <b>2022 > Industria de talentos</b> <br> 
     Diplomado en inteligencia artificial<br> <br>
+    <b>202X > Platzi</b> <br> 
+    Escuelas de nodejs, Django y DataScience e inteligencia artifical.<br> <br>
     `
     co()
     estudios2.classList.add("foo")
